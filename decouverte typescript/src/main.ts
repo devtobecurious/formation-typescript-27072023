@@ -1,11 +1,33 @@
- import { Yolo } from './yolo';
+/**
+ * Exemple d'appel d'un bouton HTML
+ */
+const button: HTMLButtonElement | null = document.querySelector("#button") ;
 
-var y = new Yolo("yolo", 1);
-y.osef();
+button?.addEventListener('click', () => {
+    console.log('click');
+});
 
-y.angle = 2;
+// *********************************************************************************************************************
+type Afficher = (message: string) => void;
 
-const result = y.calculer();
-const str = result.toFixed(2);
+class Composant {
+    //click(afficher: Function): void {
+    click(afficher: Afficher): void {
+        afficher('click');
+        afficher.call(this, 'click');
+    }
+}
 
-// y = 1; 
+const composant = new Composant();
+composant.click((message: string) => {
+
+});
+
+composant.click((message: string) => {
+
+});
+
+composant.click(() => {
+    
+});
+// composant.click(1);
