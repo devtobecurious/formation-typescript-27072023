@@ -7,10 +7,11 @@
     "pretsc": "echo \"je suis dans le pretsc\"",
     "tsc": "tsc",
     "posttsc": "echo \"je suis dans le posttsc\"",
-    
+
     "start": "",
     
     "prebuild": "echo \"je suis dans le prebuild\"",
+    "build:watch": "npm run tsc -- --watch",
     "build": "npm run tsc"
   },
   "keywords": [],
