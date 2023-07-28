@@ -1,6 +1,6 @@
 import { Wookiee } from "./domains/wookiee";
 import { StormTrooper } from "./domains/stormtrooper";
-import Character from "./domains/character";
+import { Character } from "./domains/character";
 
 
 const wookiee: Character = new Wookiee(1, "Chewbacca");

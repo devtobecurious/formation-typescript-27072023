@@ -123,3 +123,45 @@ const servicePlanetes: RamenerDonnees = {
     }
 };
 afficherTableau(servicePlanetes);
+
+
+
+// *********************************************************************************************************************
+
+function afficherInfo(item: unknown): void {
+    if (typeof item === 'string') {
+        const val = item.toUpperCase();
+    }
+}
+afficherInfo('plouf');
+
+
+
+type NombreOuString = number | string;
+function afficherNombreOuString(nombreOuString: NombreOuString): void {
+    // 4° type guard
+    if (typeof nombreOuString === 'number') {
+        console.log(nombreOuString.toFixed(2));
+    } else if (typeof nombreOuString === 'string') {
+        console.log(nombreOuString.toUpperCase());
+    }
+}
+
+
+type AnimalType= 'Rancor' | 'Ewok' | 'etc';
+function affficherAnimal(type: AnimalType): void {
+    console.log(type);
+}
+
+//affficherAnimal('rancor');
+
+type PersonneT = { nom: string, prenom: string };
+type ListAttributs = keyof PersonneT; // 'nom' | 'prenom'
+
+const attribut: ListAttributs = 'nom';
+
+
+function afficherAttributPersonne(personne: PersonneT, attribut: ListAttributs): void {
+    console.log(personne[attribut]);
+}
+afficherAttributPersonne({ nom: 'Doe', prenom: 'John' }, 'prenom');

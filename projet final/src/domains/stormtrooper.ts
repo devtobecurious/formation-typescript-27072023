@@ -1,8 +1,7 @@
-import Character from "./character";
-import Vie from "./vie";
+import { Character } from "./character";
 
 export class StormTrooper extends Character {
     constructor(id: number, prenom: string) {
-        super(id, prenom, new Vie(100));
+        super(id, prenom, { points: 100 });
     }
 }
